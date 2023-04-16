@@ -6,12 +6,13 @@
     "package-lock.json": true,
     "utils/suppress.js": true,
     "package.json": true,
-    "tsconfig.json": true
+    "tsconfig.json": true,
+    ".eslintrc.json": true
   },
   "[javascript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
   "[typescript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
   "code-runner.executorMap": { "typescript": "tsx" },
-  "editor.tokenColorCustomizations": { "comments": "#6a6e7d" },
+  "editor.tokenColorCustomizations": { "comments": "#4d5262" },
   "autolink.queries": [
     {
       "linkPattern": "MDN/([^ ]+)",

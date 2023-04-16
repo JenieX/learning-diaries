@@ -9,5 +9,6 @@
     "moduleResolution": "Node",
     "noUncheckedIndexedAccess": true
   },
-  "include": ["./utils/", "./content/web/javascript/", "./test.ts"]
+  "include": ["./utils/", "./content/web/javascript/", "./test.ts"],
+  // "ts-node": { "esm": true, "experimentalSpecifierResolution": "node" }
 }
