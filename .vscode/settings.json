@@ -1,18 +1,19 @@
 {
   "files.exclude": {
     // ".vscode/": true,
-    ".gitignore": true,
+    // ".gitignore": true,
     "node_modules": true,
     "package-lock.json": true,
     "utils/suppress.js": true,
     "package.json": true,
     "tsconfig.json": true,
-    ".eslintrc.json": true
+    ".eslintrc.json": true,
+    ".eslintignore": true
   },
   "[javascript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
   "[typescript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
   "code-runner.executorMap": { "typescript": "tsx" },
-  "editor.tokenColorCustomizations": { "comments": "#4d5262" },
+  "editor.tokenColorCustomizations": { "comments": "#565b6b" },
   "autolink.queries": [
     {
       "linkPattern": "MDN/([^ ]+)",

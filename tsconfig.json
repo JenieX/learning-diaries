@@ -9,6 +9,13 @@
     "moduleResolution": "Node",
     "noUncheckedIndexedAccess": true
   },
-  "include": ["./utils/", "./content/web/javascript/", "./test.ts"],
+  "include": [
+    //
+    "./utils/",
+    "./content/web/javascript/",
+    "./content/web/typescript/handbook/",
+    "./test.ts"
+  ],
+  "exclude": ["./**/build/"]
   // "ts-node": { "esm": true, "experimentalSpecifierResolution": "node" }
 }
