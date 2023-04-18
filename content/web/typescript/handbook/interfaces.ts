@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 /**
- * Type inference, similar to type aliases, allow you
+ * Type inferences, similar to type aliases, allow you
  * to create a new name for an existing type.
  */
 interface User { name: string, age: number }
