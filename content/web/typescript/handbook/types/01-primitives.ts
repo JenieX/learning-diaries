@@ -14,4 +14,11 @@ dead = true;
 const user: string = 'JenieX';
 user.includes('i');
 
+/**
+ * Literal types allows you to define a type that accepts only the specified string(s)
+ */
+let size: 'large' | 'small';
+size = 'large';
+size = 'small';
+
 export {};

@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
 
+import { type } from 'node:os';
+
 /**
  * Type aliases allow you to create a new name for an existing type
  */
@@ -46,6 +48,17 @@ const me: Me = {
   age: 31,
   awesome: true,
   dead: false,
+};
+
+/**
+ * You can set the signature for a function to avoid annotations.
+ *
+ * Note that this doesn't work with function deceleration
+ */
+type FunctionDefinition = (someUser: string) => string;
+
+const someFunction: FunctionDefinition = (someUser) => {
+  return `Hello ${someUser}`;
 };
 
 export {};

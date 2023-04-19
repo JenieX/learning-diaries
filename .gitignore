@@ -2,3 +2,4 @@ node_modules
 trash
 test.ts
 test.js
+utils/rename-subtitles.ts
