@@ -44,7 +44,7 @@ const impossibleMadePossible = (10 as unknown) as string;
  * assume that the value is not null or undefined, even if the type
  * of the variable or expression includes these types.
  *
- * Below example would achieve the same as:
+ * Below example **may** achieve something similar to:
  * ```js
  * document.querySelector('img') as HTMLImageElement;
  * ```

@@ -32,6 +32,10 @@
     }
   ],
   "rules": {
+    // TODO Update to there projects
+    "@typescript-eslint/lines-between-class-members": 0,
+    // End
+
     "@typescript-eslint/no-duplicate-type-constituents": 2,
 
     "no-console": 0,
