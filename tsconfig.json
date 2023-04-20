@@ -10,10 +10,10 @@
     "noUncheckedIndexedAccess": true
   },
   "include": [
-    //
     "./utils/",
     "./content/web/javascript/",
     "./content/web/typescript/handbook/",
+    "./content/learn/javascript/",
     "./test.ts"
   ],
   "exclude": ["./**/build/"]

@@ -36,4 +36,7 @@ console.log(Object.getOwnPropertyNames(rectangle));
 const rectanglePrototype = Object.getOwnPropertyNames(Object.getPrototypeOf(rectangle));
 console.log(rectanglePrototype);
 
+/** Works. The class version prints an empty object */
+// console.log(Object.getPrototypeOf(rectangle));
+
 export {};

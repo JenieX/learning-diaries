@@ -5,3 +5,5 @@ const weirdo = {
 };
 
 console.log(weirdo.valueOf);
+
+export {};

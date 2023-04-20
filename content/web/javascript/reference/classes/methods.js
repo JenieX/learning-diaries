@@ -42,4 +42,7 @@ console.log(Object.getOwnPropertyNames(rectangle));
 const rectanglePrototype = Object.getOwnPropertyNames(Object.getPrototypeOf(rectangle));
 console.log(rectanglePrototype);
 
+/** Gets an empty object unlike the function version */
+// console.log(Object.getPrototypeOf(rectangle));
+
 export {};
