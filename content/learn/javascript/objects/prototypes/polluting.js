@@ -32,6 +32,9 @@ const person = { name: 'John' };
 console.log(person.hacked);
 person.whyNot();
 
-console.log(Object.getOwnPropertyNames(person.__proto__));
+console.log(person.__proto__);
+console.log(Object.prototype);
+// console.log(Object.getOwnPropertyNames(person.__proto__));
+// console.log(Object.getOwnPropertyNames(Object.prototype));
 
 export {};
