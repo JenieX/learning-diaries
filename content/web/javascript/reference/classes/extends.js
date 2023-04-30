@@ -12,46 +12,74 @@
  *
  * The prototype property of the ParentClass must be an Object or null.
  *
+ * While the base class may return anything from its constructor, the derived class
+ * must return an object or undefined, or a TypeError will be thrown.
+ *
+ * The reserved 'super' keyword is for making super-constructor calls and allows
+ * access to parent methods.
+ *
+ * Note: In derived classes, super() must be called before you can use 'this'.
+ * Leaving this out will cause a reference error.
+ *
+ * Methods of a sub class will override the parent's, meaning, that sub class that
+ * are missing a method, will fall back to the super class method. This is called Polymorphism.
+ *
  * MDN/Web/JavaScript/Reference/Classes/extends
+ * https://googlechrome.github.io/samples/classes-es6/index.html
  */
 
-function Rectangle(width, height) {
-  this.isShape = true;
-  this.width = width;
-  this.height = height;
+let storedThis;
+
+class Polygon {
+  sayName() {
+    console.log('Hi, I am a', `${this.name}.`);
+  }
+
+  sayWhoIsAwesome() {
+    console.log(`${this.name} is awesome`);
+  }
+
+  constructor(height, width) {
+    this.name = 'Polygon';
+    this.height = height;
+    this.width = width;
+    storedThis = this;
+  }
 }
 
-Rectangle.prototype.logArea = function logArea() {
-  console.log(this.height * this.width);
-};
+// const polygon = new Polygon(300, 400);
+// polygon.sayName();
+// console.log(polygon);
+// console.log(`The width of this polygon is ${polygon.width}`);
 
-class ColoredRectangle extends Rectangle {}
-const coloredRectangle = new ColoredRectangle(50, 10);
-// console.log(coloredRectangle);
+// ------------------------------------------------
 
-// console.log(Object.getOwnPropertyNames(ColoredRectangle.__proto__));
+class Square extends Polygon {
+  constructor(length) {
+    super(length, length);
 
-// console.log();
+    // console.log(super.constructor);
+    console.log(this === storedThis);
 
-function name(params) {}
+    /** Then you can override or add new properties */
+    this.name = 'Square';
 
-// console.log(name.__proto__ === Rectangle.__proto__);
+    // console.log(this);
+  }
 
-/**
- * Allows inheritance of static properties.
- * Next line evaluates to True
- */
-console.log(ColoredRectangle.__proto__ === Rectangle);
+  get area() {
+    super.sayWhoIsAwesome();
 
-/**
- * Allows inheritance of instance properties.
- * Next line evaluates to True
- */
-console.log(ColoredRectangle.prototype.__proto__ === Rectangle.prototype);
+    return this.height * this.width;
+  }
+}
 
-// class ModernClass {
-//   someProperty = 1;
-//   someMethod() {}
-// }
+const square = new Square(5);
+square.sayName();
+console.log(`The area of this square is ${square.area}`);
 
-// class AnotherChildClass extends ModernClass {}
+// True
+// console.log(square instanceof Square);
+
+// True
+// console.log(square instanceof Polygon);

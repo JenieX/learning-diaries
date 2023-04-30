@@ -29,10 +29,17 @@ const rectangle = new Rectangle(50, 10);
 console.log(Rectangle.prototype === rectangle.__proto__);
 
 // True
+console.log(Object.prototype === rectangle.__proto__.__proto__);
+// console.log(Object.prototype === Rectangle.prototype.__proto__);
+
+// .
+
+// True
 console.log(Function.prototype === Rectangle.__proto__);
 
 // True
-console.log(Object.prototype === rectangle.__proto__.__proto__);
+console.log(Object.prototype === Rectangle.__proto__.__proto__);
+// console.log(Object.prototype === Function.prototype.__proto__);
 
 // .
 
