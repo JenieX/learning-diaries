@@ -4,5 +4,14 @@
     "@typescript-eslint/no-unused-vars": 0,
     "max-classes-per-file": 0,
     "no-proto": 0
-  }
+  },
+  "ignorePatterns": ["content/web/typescript/projects/*/build/**"],
+  "overrides": [
+    {
+      "files": ["./content/web/typescript/projects/simple/**/*.ts"],
+      "parserOptions": {
+        "project": "./content/web/typescript/projects/simple/tsconfig.json"
+      }
+    }
+  ]
 }
