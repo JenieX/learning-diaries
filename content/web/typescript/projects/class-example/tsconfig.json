@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "strict": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "moduleResolution": "Node",
+    "noUncheckedIndexedAccess": true,
+
+    "noEmitOnError": true,
+
+    // https://stackoverflow.com/questions/72920294
+    "rootDir": "./src/",
+    "outDir": "./build/"
+  },
+  "include": ["src/"]
+}

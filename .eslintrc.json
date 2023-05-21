@@ -9,8 +9,12 @@
   "overrides": [
     {
       "files": ["./content/web/typescript/projects/simple/**/*.ts"],
+      "parserOptions": { "project": "./content/web/typescript/projects/simple/tsconfig.json" }
+    },
+    {
+      "files": ["./content/web/typescript/projects/class-example/**/*.ts"],
       "parserOptions": {
-        "project": "./content/web/typescript/projects/simple/tsconfig.json"
+        "project": "./content/web/typescript/projects/class-example/tsconfig.json"
       }
     }
   ]
