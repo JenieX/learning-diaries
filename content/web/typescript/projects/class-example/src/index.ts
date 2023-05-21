@@ -7,10 +7,12 @@ interface IPolygon {
 
 interface ISquare extends IPolygon {
   getArea: () => number,
+  logInfo: () => void,
 }
 
 interface IRectangle extends IPolygon {
   getArea: () => number,
+  logInfo: () => void,
 }
 
 // ------------------------------------------------
@@ -37,7 +39,7 @@ class Polygon implements IPolygon {
     this.sayID();
   }
 
-  sayID(): void {
+  private sayID(): void {
     console.log(`My id is ${this.id}`);
   }
 
@@ -63,6 +65,11 @@ class Square extends Polygon implements ISquare {
     return this.sideLengths[0]! ** 2;
   }
 
+  public logInfo(): void {
+    console.log(`My perimeter is ${this.getPerimeter()}`);
+    console.log(`My area is ${this.getArea()}`);
+  }
+
   constructor(sideLength: number) {
     super([sideLength, sideLength, sideLength, sideLength]);
     this.name = 'Square';
@@ -76,6 +83,11 @@ class Rectangle extends Polygon implements IRectangle {
     return this.sideLengths[0]! * this.sideLengths[1]!;
   }
 
+  public logInfo(): void {
+    console.log(`My perimeter is ${this.getPerimeter()}`);
+    console.log(`My area is ${this.getArea()}`);
+  }
+
   constructor(width: number, height: number) {
     super([width, height, width, height]);
     this.name = 'Rectangle';
@@ -86,15 +98,13 @@ class Rectangle extends Polygon implements IRectangle {
 
 const square = new Square(5);
 square.sayName();
-console.log(`My perimeter is ${square.getPerimeter()}`);
-console.log(`My area is ${square.getArea()}`);
+square.logInfo();
 
 console.log('------------------------');
 
 const rectangle = new Rectangle(5, 10);
 rectangle.sayName();
-console.log(`My perimeter is ${rectangle.getPerimeter()}`);
-console.log(`My area is ${rectangle.getArea()}`);
+rectangle.logInfo();
 
 console.log('------------------------');
 

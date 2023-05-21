@@ -34,6 +34,10 @@ class Square extends Polygon {
     getArea() {
         return this.sideLengths[0] ** 2;
     }
+    logInfo() {
+        console.log(`My perimeter is ${this.getPerimeter()}`);
+        console.log(`My area is ${this.getArea()}`);
+    }
     constructor(sideLength) {
         super([sideLength, sideLength, sideLength, sideLength]);
         this.name = 'Square';
@@ -43,6 +47,10 @@ class Rectangle extends Polygon {
     getArea() {
         return this.sideLengths[0] * this.sideLengths[1];
     }
+    logInfo() {
+        console.log(`My perimeter is ${this.getPerimeter()}`);
+        console.log(`My area is ${this.getArea()}`);
+    }
     constructor(width, height) {
         super([width, height, width, height]);
         this.name = 'Rectangle';
@@ -50,13 +58,11 @@ class Rectangle extends Polygon {
 }
 const square = new Square(5);
 square.sayName();
-console.log(`My perimeter is ${square.getPerimeter()}`);
-console.log(`My area is ${square.getArea()}`);
+square.logInfo();
 console.log('------------------------');
 const rectangle = new Rectangle(5, 10);
 rectangle.sayName();
-console.log(`My perimeter is ${rectangle.getPerimeter()}`);
-console.log(`My area is ${rectangle.getArea()}`);
+rectangle.logInfo();
 console.log('------------------------');
 console.log(`Total created polygons: ${Polygon.getCount()}`);
 console.warn('Resetting counter..');
