@@ -1,7 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
-
-import { type } from 'node:os';
 
 /**
  * Type aliases allow you to create a new name for an existing type

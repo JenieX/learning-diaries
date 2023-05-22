@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-
 /**
  * Return Type is inferred but args need to be specified when
  * the option `noImplicitAny` is set to true. Hover over the name
