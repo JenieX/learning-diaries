@@ -10,6 +10,7 @@ interface Example {
 }
 
 type ExampleWithoutBar = Omit<Example, 'bar'>;
+type ExampleWithFooOnly = Omit<Example, 'bar' | 'baz'>;
 
 const example: Example = {
   foo: 'Hello',
@@ -20,4 +21,8 @@ const example: Example = {
 const exampleWithoutBar: ExampleWithoutBar = {
   foo: 'Hello',
   baz: true,
+};
+
+const exampleWithFooOnly: ExampleWithFooOnly = {
+  foo: 'Hello',
 };
