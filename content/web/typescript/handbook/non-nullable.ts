@@ -1,3 +1,8 @@
+/**
+ * In TypeScript, the NonNullable<T> utility type is used to create a new type by
+ * removing the null and undefined types from an existing type T.
+ */
+
 type NullableOr<T> = T | null | undefined;
 
 interface Person {
