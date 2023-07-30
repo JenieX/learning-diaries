@@ -32,3 +32,5 @@ const people: Person[] = [
  */
 const teenagers = findTeenagers(people);
 console.log(teenagers);
+
+export {};
